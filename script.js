@@ -36,7 +36,7 @@ function showQuestion() {
   nextBtn.classList.add("hidden");
 
   const q = quizData[currentQuestion];
-  questionEl.textContent = Q${currentQuestion + 1}. ${q.question};
+  questionEl.textContent = `Q${currentQuestion + 1}. ${q.question}`;
 
   optionsForm.innerHTML = "";
   for (let key in q.options) {
