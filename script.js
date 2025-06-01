@@ -9,7 +9,7 @@ let currentQuestion = 0;
 let quizData = [];
 
 async function loadSubjects() {
-  const res = await fetch("http://localhost:5000/subjects");
+  const res = await fetch("https://quiz-backend-gxk4.onrender.com/subjects");
   const subjects = await res.json();
 
   subjects.forEach(subject => {
@@ -22,7 +22,7 @@ async function loadSubjects() {
 }
 
 async function startQuiz(subject) {
-  const res = await fetch(`http://localhost:5000/quiz/${subject}`);
+  const res = await fetch(https://quiz-backend-gxk4.onrender.com/quiz/${subject});
   quizData = await res.json();
 
   subjectsDiv.style.display = "none";
@@ -36,7 +36,7 @@ function showQuestion() {
   nextBtn.classList.add("hidden");
 
   const q = quizData[currentQuestion];
-  questionEl.textContent = `Q${currentQuestion + 1}. ${q.question}`;
+  questionEl.textContent = Q${currentQuestion + 1}. ${q.question};
 
   optionsForm.innerHTML = "";
   for (let key in q.options) {
