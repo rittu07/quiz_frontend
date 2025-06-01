@@ -22,7 +22,7 @@ async function loadSubjects() {
 }
 
 async function startQuiz(subject) {
-  const res = await fetch(https://quiz-backend-gxk4.onrender.com/quiz/${subject});
+  const res = await fetch(`https://quiz-backend-gxk4.onrender.com/quiz/${subject}`);
   quizData = await res.json();
 
   subjectsDiv.style.display = "none";
